@@ -9,9 +9,14 @@
     songs = songs.
 </script>
 <a href="#" class="musicPlay" onmousedown="interactArt();">Art</a>
-<iframe id="interactiveArt" src="./art1.html" style="display: none; position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
+	
+<a href="#" class="musicPlay" onmousedown="interactArt2();">Art 2</a>
+<iframe id="interactiveArt" src="./art1.html" style="display: none; position:fixed; top:29px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
     Your browser doesn't support iframes
 </iframe>
+<iframe id="interactiveArt2" src="./art2.html" style="display: none; position:fixed; top:29px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
+    Your browser doesn't support iframes
+</iframe>	
 <style>
 /* css */
 /*javascript button css */    
@@ -425,6 +430,20 @@ function interactArt() {
         z.style.display = "none";
     }
 }
+function interactArt2() {
+    var x = document.getElementById("interactiveArt");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+    var z = document.getElementById("everythingElse");
+    if (z.style.display === "none") {
+        z.style.display = "block";
+    } else {
+        z.style.display = "none";
+    }
+}	
 </script>
 <script>
 function musicHide(){
