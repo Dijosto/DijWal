@@ -1,0 +1,235 @@
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms no-csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+    <style>
+
+	body {
+}
+
+div {
+    
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-padding-end: 1px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    background:url("https://nem3s.is/bg.png") repeat fixed;
+    
+    border: 3px solid ;
+    color: grey;
+    font-size: inherit;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	
+
+}
+
+    </style>
+    
+    </head>
+<body>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+<div style="
+    width: relative;
+">
+  <div style="
+    width: relative;
+">
+    <div class="row" style="
+    width: relative;
+
+">
+      <div class="col-6"><h3 id="npAction">Paused:</h3></div>
+      <div class="col-6" id="npTitle"></div>
+    </div>
+    <div class="row" style="
+    padding-right: 0px;
+    width: relative;
+">
+      <div class="col-6" style="
+    width: relative;
+">
+        <audio id="audio1" controls="controls" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3">
+          Your browser does not support the HTML5 Audio Tag.
+        </audio>
+      </div>
+      <noscript>Your browser does not support JavaScript or JavaScript has been disabled. You will need to enable JavaScript for this page.</noscript>
+      <div class="col-6">
+        <button id="btnPrev" class="ctrlbtn">|&lt;&lt; Prev Track</button> <button id="btnNext" class="ctrlbtn">Next Track &gt;&gt;|</button>
+      </div>
+    </div>
+    
+    </div>
+  </div>
+
+    <script type="text/javascript">
+        jQuery(function($) {
+  var supportsAudio = !!document.createElement('audio').canPlayType;
+  if(supportsAudio) {
+    var index = 0,
+    playing = false,
+    tracks = [
+      {"track":1,"name":"In My Dreams by Kid Cudi","file":"https://nem3s.is/files/music/requests/Kid%20Cudi/Man%20On%20The%20Moon%20The%20End%20Of%20Day%20%28Int%27l%20Version%29%20%28Album%29/05%20Heart%20Of%20A%20Lion%20%28Kid%20Cudi%20Theme%20Music%29%20%28Album%20Version%20Explicit%29.flac"},
+      {"track":2,"name":"SoundHelix Song 3","file":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"},
+      {"track":3,"name":"SoundHelix Song 8","file":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"},
+	  {"track":4,"name":"","file":""},
+	  {"track":5,"name":"","file":""},
+	  {"track":6,"name":"","file":""},
+	  {"track":7,"name":"","file":""},
+	  {"track":8,"name":"","file":""},
+	  {"track":9,"name":"","file":""},
+	  {"track":10,"name":"","file":""},
+	  {"track":11,"name":"","file":""},
+	  {"track":12,"name":"","file":""},
+	  {"track":13,"name":"","file":""},
+	  {"track":14,"name":"","file":""},
+	  {"track":15,"name":"","file":""},
+	  {"track":16,"name":"","file":""},
+	  {"track":17,"name":"","file":""},
+	  {"track":18,"name":"","file":""},
+	  {"track":19,"name":"","file":""},
+	  {"track":20,"name":"","file":""},
+	  {"track":21,"name":"","file":""},
+	  {"track":22,"name":"","file":""},
+	  {"track":23,"name":"","file":""},
+	  {"track":24,"name":"","file":""},
+	  {"track":25,"name":"","file":""},
+	  {"track":26,"name":"","file":""},
+	  {"track":27,"name":"","file":""},
+	  {"track":28,"name":"","file":""},
+	  {"track":29,"name":"","file":""},
+	  {"track":30,"name":"","file":""},
+	  {"track":32,"name":"","file":""},
+	  {"track":33,"name":"","file":""},
+	  {"track":34,"name":"","file":""},
+	  {"track":35,"name":"","file":""},
+	  {"track":36,"name":"","file":""},
+	  {"track":37,"name":"","file":""},
+	  {"track":38,"name":"","file":""},
+	  {"track":39,"name":"","file":""},
+	  {"track":40,"name":"","file":""},
+	  {"track":41,"name":"","file":""},
+	  {"track":42,"name":"","file":""},
+	  {"track":43,"name":"","file":""},
+	  {"track":44,"name":"","file":""},
+	  {"track":45,"name":"","file":""},
+	  {"track":46,"name":"","file":""},
+	  {"track":47,"name":"","file":""},
+	  {"track":48,"name":"","file":""},
+	  {"track":49,"name":"","file":""},
+	  {"track":50,"name":"","file":""},
+	  {"track":51,"name":"","file":""},
+	  {"track":52,"name":"","file":""},
+	  {"track":53,"name":"","file":""},
+	  {"track":54,"name":"","file":""},
+	  {"track":55,"name":"","file":""},
+	  {"track":56,"name":"","file":""},
+	  {"track":57,"name":"","file":""},
+	  {"track":58,"name":"","file":""},
+	  {"track":59,"name":"","file":""},
+	  {"track":60,"name":"","file":""},
+	  {"track":61,"name":"","file":""},
+	  {"track":62,"name":"","file":""},
+	  {"track":63,"name":"","file":""},
+	  {"track":64,"name":"","file":""},
+	  {"track":65,"name":"","file":""},
+	  {"track":66,"name":"","file":""},
+	  {"track":67,"name":"","file":""},
+	  {"track":68,"name":"","file":""},
+	  {"track":69,"name":"","file":""},
+	  {"track":70,"name":"","file":""},
+	  {"track":71,"name":"","file":""},
+	  {"track":72,"name":"","file":""},
+	  {"track":73,"name":"","file":""},
+	  {"track":74,"name":"","file":""},
+	  {"track":75,"name":"","file":""},
+	  {"track":76,"name":"","file":""},
+	  {"track":77,"name":"","file":""},
+	  {"track":78,"name":"","file":""},
+	  {"track":79,"name":"","file":""},
+	  {"track":80,"name":"","file":""},
+	  {"track":81,"name":"","file":""},
+	  {"track":82,"name":"","file":""},
+	  {"track":83,"name":"","file":""},
+	  {"track":84,"name":"","file":""},
+	  {"track":85,"name":"","file":""},
+	  {"track":86,"name":"","file":""}
+    ],
+    trackCount = tracks.length,
+    npAction = $('#npAction'),
+    npTitle = $('#npTitle'),
+    audio = $('#audio1').bind('play', function() {
+      playing = true;
+      npAction.text('Now Playing:');
+    }).bind('pause', function() {
+      playing = false;
+      npAction.text('Paused:');
+    }).bind('ended', function() {
+      npAction.text('Paused:');
+      if((index + 1) < trackCount) {
+        index++;
+        loadTrack(index);
+        audio.play();
+      } else {
+        audio.pause();
+        index = 0;
+        loadTrack(index);
+      }
+    }).get(0),
+    btnPrev = $('#btnPrev').click(function() {
+      if((index - 1) > -1) {
+        index--;
+        loadTrack(index);
+        if(playing) {
+          audio.play();
+        }
+      } else {
+        audio.pause();
+        index = 0;
+        loadTrack(index);
+      }
+    }),
+    btnNext = $('#btnNext').click(function() {
+      if((index + 1) < trackCount) {
+        index++;
+        loadTrack(index);
+        if(playing) {
+          audio.play();
+        }
+      } else {
+        audio.pause();
+        index = 0;
+        loadTrack(index);
+      }
+    }),
+    loadTrack = function(id) {
+      $('.plSel').removeClass('plSel');
+      $('#plTrack>div:eq(' + id + ')').addClass('plSel');
+      npTitle.text(tracks[id].name);
+      index = id;
+      audio.src = tracks[id].file;
+    },
+    displayTrack = function(){
+      var parent = $('#plTrack');
+      $.each(tracks, function(i, track) {
+        $('<div></div>').addClass('row')
+        
+        .appendTo(parent);
+      });
+    },
+    playTrack = function(id) {
+      loadTrack(id);
+      audio.play();
+    };
+
+ 
+    loadTrack(index);
+  }
+});
+    </script>
+
+</body></html>
